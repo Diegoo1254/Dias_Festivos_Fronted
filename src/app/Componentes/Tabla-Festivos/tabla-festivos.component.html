@@ -1,0 +1,18 @@
+<div class="container-fluid w-100 justify-content-center" data-bs-theme="dark">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Festivos</th>
+            <th scope="col">Fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (festivo of FestivosHttpClienteService.ListaFestivos; track $index) {
+            <tr>
+              <td>{{festivo.Nombre}}</td>
+              <td>{{festivo.Dia}}-{{festivo.Mes}}-{{festivo.Year}}</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+</div>
